@@ -1,0 +1,32 @@
+runtime: php73
+
+entrypoint: serve index.php
+
+handlers:
+- url: /css
+  static_dir: css
+
+- url: /HOMELESS
+  static_dir: HOMELESS
+
+- url: /images
+  static_dir: imghomeless
+
+- url: /imgPost
+  static_dir: imgPost
+
+- url: /js
+  static_dir: js
+
+- url: /vendor
+  static_dir: vendor
+
+# Serve images as static resources.
+- url: /(.+\.(png|jpg))$
+  static_files: \IMG
+  upload: .+\.(png|jpg)$
+
+- url: /.*
+  script: auto
+
+

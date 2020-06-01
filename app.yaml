@@ -1,0 +1,39 @@
+runtime: php73
+
+entrypoint: serve index.php
+
+handlers:
+- url: /css
+  static_dir: css
+
+- url: /FFG_DONOR
+  static_dir: FFG_DONOR
+
+- url: /FFG_ADMIN
+  static_dir: FFG_ADMIN
+
+- url: /fonts
+  static_dir: fonts
+
+- url: /fullcalendar
+  static_dir: fullcalendar
+
+- url: /IMG
+  static_dir: IMG
+
+- url: /js
+  static_dir: js
+
+- url: /toemail
+  static_dir: toemail
+
+
+# Serve images as static resources.
+- url: /(.+\.(png|jpg))$
+  static_files: \IMG
+  upload: .+\.(png|jpg)$
+
+- url: /.*
+  script: auto
+
+
