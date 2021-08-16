@@ -9,7 +9,7 @@
 <html lang="en">
 
 <!-- Title Page-->
-<title>Homeless Record</title>
+<title>Donor Record</title>
 
 <body>
     <div class="page-wrapper">
@@ -37,7 +37,7 @@
                         <div class="row mb-3">
                             <div class="col-md-12">
                                 <div class="overview-wrap">
-                                    <h2 class="title-1">Donor Information</h2>
+                                    <h2 class="title-1">Volunteer Information</h2>
 
                                 </div>
                             </div>

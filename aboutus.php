@@ -41,7 +41,7 @@
                     <!-- Single Contact Info -->
                     <div class="col-12 ">
                         <div class="single-contact-info mb-30 text-center wow fadeInUp section_padding_0_80"
-                            style=" padding-below:100px;" data-wow-delay="0.3s">
+                            style=" padding-bottom:100px;" data-wow-delay="0.3s">
                             <h4>FFG</h4>
                             <p>Formed after Kuantan Flood in mid 2014. ‘Gelandangan’ a Malaysian synonym of homeless
                                 To denote the intent of giving . The noble idea of FFG to share food/love with the

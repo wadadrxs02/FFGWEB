@@ -56,7 +56,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="col-md-3">
+                            <!--<div class="col-md-3">
                                 <div class="card" style="width:14rem">
                                     <div class="card-header" style="background-color:#403F4C">
                                         <strong class="card-title text-light">Volunteer Record</strong>
@@ -65,10 +65,7 @@
                                         <div class="row no-gutters align-items-center">
                                             <div class="col mr-2">
                                                 <h2>
-                                                <?php $volunteer = $connection->query("SELECT COUNT(id_volunteer) AS totalvolunteer FROM Volunteer");
-                                                while($fetch = $volunteer->fetch_array()){ ?>
-                                                <?php  echo $fetch['totalvolunteer'];?>
-                                                <?php  } ?>
+                                           
                                                 </h2>
                                             </div>
                                             <div class="col-auto">
@@ -77,7 +74,7 @@
                                         </div>
                                     </div>
                                 </div>
-                            </div>
+                            </div>-->
                             <div class="col-md-3">
                                 <div class="card" style="width:14rem">
                                     <div class="card-header" style="background-color:#403F4C">
@@ -95,6 +92,26 @@
                                             </div>
                                             <div class="col-auto">
                                                 <i class="fas fa-user-shield fa-2x text-gray-300"></i>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-md-3">
+                                <div class="card" style="width:14rem">
+                                    <div class="card-header" style="background-color:#403F4C">
+                                        <strong class="card-title text-light">Volunteer Record</strong>
+                                    </div>
+                                    <div class="card-body text-white" style="background-color:#EB5160">
+                                        <div class="row no-gutters align-items-center">
+                                            <div class="col mr-2">
+                                                <h2>
+                                               3
+                                                </h2>
+                                            </div>
+                                            <div class="col-auto">
+                                                <i class="fas fa-people-carry fa-2x text-gray-300"></i>
                                             </div>
                                         </div>
                                     </div>
@@ -196,7 +213,7 @@
                         </div>
                     </div>
 
-                    <?php include_once 'footer.php';?>
+                    <?php //include_once 'footer.php';?>
 
 
                 </div> <!-- END SECTION CONTENT-->

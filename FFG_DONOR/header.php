@@ -8,15 +8,13 @@ if (!isset($_SESSION['id_donor'])AND $_SESSION['email'] == '') {
    // $_SESSION['id_donor'] = true;
     header("Location:../index.php");
     exit();
-}
-
-
-?>
+} ?>
 <!DOCTYPE html>
 <html lang="en">
 <?php
 require_once 'Yhead.php';
 ?>
+
 <body>
 
     <div id="colorlib-page">
@@ -30,11 +28,11 @@ require_once 'Yhead.php';
             while ($row = $donor->fetch_array()) {
             ?>
 
-                <h1 id="colorlib-logo">
-                    <a href="index.php">
-                        <span class="img" style="background-image: url(images/masks.png);"></span>
-                    </a> <?php echo $row['name']; ?>
-                </h1>
+            <h1 id="colorlib-logo">
+                <a href="index.php">
+                    <span class="img" style="background-image: url(images/masks.png);"></span>
+                </a> <br> <?php echo $row['name']; ?>
+            </h1>
 
             <?php  } ?>
 
@@ -44,9 +42,12 @@ require_once 'Yhead.php';
                     <li><a href="../ffg_donor/Donation.php">Donation</a></li>
                     <li><a href="../ffg_donor/history.php">History</a></li>
                     <li><a href="../ffg_donor/homelessalert.php">Notify Homeless</a></li>
-                    <li> <a href="Xlogout.php">Log Out &nbsp<title="info" class="fas fa-power-off" title="Log Out" data-placement="top" data-toggle="tooltip"></i></a></li>
+                    <li> <a href="Xlogout.php">Log Out &nbsp<title="info" class="fas fa-power-off" title="Log Out"
+                                data-placement="top" data-toggle="tooltip"></i></a></li>
                 </ul>
             </nav>
 
 
         </aside> <!-- END COLORLIB-ASIDE -->
+
+   

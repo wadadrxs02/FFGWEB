@@ -27,7 +27,7 @@
                         <div class="col-md-12  form-group">
                             <label for="name-form1-h" class="form-control-label mbr-fonts-style ">IC
                                 Number</label>
-                            <input type="number" name="icnumber" data-form-field="Name" class="form-control " id="icnumber">
+                            <input type="number" name="icnumber" data-form-field="Name" class="form-control " id="icnumber"  >
                         </div>
 
                         <div class="col-md-6  form-group">

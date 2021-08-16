@@ -101,8 +101,8 @@
                         <i class="fas fa-table"></i>Blog</a>
                 </li>
                 <li>
-                    <a href="PlannerView.php">
-                        <i class="fas fa-chart-bar"></i>Schedule</a>
+                <a href="https://calendar.google.com/calendar/r">
+                        <i class="fas fa-chart-bar"></i>Create Event</a>
                 </li>
 
             </ul>

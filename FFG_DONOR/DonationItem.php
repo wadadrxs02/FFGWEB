@@ -15,6 +15,7 @@ include_once '../Xconnection.php';
     background-color: #56c596 !important;
 }
 </style>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <div id="colorlib-main">
     <section class="ftco-section ftco-bread">
         <div class="container">
@@ -98,10 +99,14 @@ include_once '../Xconnection.php';
                                                 value="Gcs9DFMwXPrXu0WyZP/onyJHFMuegaFp194nEhGfDj434bF0FgCs6cmkIBD5iQ4c0yn1pQGi5P3LCl3DX7XGR4od69yzUDqvXGJip4cF5zoetnpVFZTNLxqKyoh1ivfU"
                                                 data-form-email="true">
                                             <div class="col-md-8">
-                                              <b><p>ITEM</p></b>  
+                                                <b>
+                                                    <p>ITEM</p>
+                                                </b>
                                             </div>
                                             <div class="col-md-4">
-                                               <b> <p>QUANTITY</p></b>
+                                                <b>
+                                                    <p>QUANTITY</p>
+                                                </b>
                                             </div>
                                             <div class="col-md-8 form-group">
                                                 <input type="text" class="form-control" name="item"
@@ -112,15 +117,15 @@ include_once '../Xconnection.php';
                                                     placeholder="50">
                                             </div>
                                             <div class="col-md-12">
-                                              <p><b>Date Delivery :</b> </p> 
+                                                <p><b>Date Delivery :</b> </p>
                                                 <input type="date" name="datesubmit" class="form-control " id="today2">
-                                            </div> 
+                                            </div>
                                             <script>
                                             document.querySelector("#today2").valueAsDate = new Date();
                                             </script>
-                                           
+
                                             <div class="col-md-12 form-group mt-4">
-                                              <b>  Deliver By :</b>  &nbsp;
+                                                <b> Deliver By :</b> &nbsp;
                                                 <label class="radio-inline"><input type="radio" name="deliverytype"
                                                         checked value="Courier">Courier</label>
                                                 <label class="radio-inline"><input type="radio" name="deliverytype"
@@ -129,7 +134,8 @@ include_once '../Xconnection.php';
 
                                             <?php $now = new DateTime();
                                             $now->setTimezone(new DateTimeZone('Asia/Kuala_Lumpur'));   ?>
-                                            <input type="hidden" name="datetimeform" value="<?php echo $now->format("Y-m-d H:i:s"); ?>">
+                                            <input type="hidden" name="datetimeform"
+                                                value="<?php echo $now->format("Y-m-d H:i:s"); ?>">
 
 
                                             <div class="col-md-4 form-group" style=" padding-top: 2rem;">
@@ -141,6 +147,19 @@ include_once '../Xconnection.php';
                                         </form>
                                     </div>
                                 </div>
+<br>
+
+                                <div class="card" style="background-color: #000000 ; padding-right: 1rem ;">
+                                    <div class="card-body">
+                                   
+                                        <h4 style="color:#e6fff7;" class="text-l-left"> <b> Or send it to address :
+                                            </b>  <br><i class="fa fa-home" style="font-size:36px; color:white"></i>
+                                             52 & 53 Jalan Silang, Pudu Raya, 50250, Kuala Lumpur <br>
+                                        </h4>
+                                    </div>
+                                </div>
+
+
                             </div>
                         </div>
                     </div>

@@ -84,15 +84,15 @@ while ($row = mysqli_fetch_array($result)) {
                             </select>
                         </div>
                         <input type="hidden" name="id_contribution" value="<?php echo $row['id_contribution']; ?>"
-                                class="form-control ">
+                            class="form-control ">
                         <div class="col-md-6  form-group" style="margin-top:35px">
                             <button type="submit" value="Insert" id="insert" class="btn btn-success"
                                 name="submit">Save</button>
                             <button type="button" class="btn btn-secondary " data-dismiss="modal">Cancel</button>
-                            
+
                         </div>
                     </div>
-            </div>
+                </div>
             </form>
             <!---Formbuilder Form--->
         </div>

@@ -99,9 +99,9 @@ while ($row=mysqli_fetch_array($query)) {
 
                                     </div>
                                     <a href="#">
-                                        <h2 class="post-headline"><?php echo $row2['id_blog'];?></h2>
+                                        <h2 class="post-headline"><?php echo $row2['title'];?></h2>
                                     </a>
-                                    <p><?php echo $row2['title'];?></p>
+                                    <p class="text-justify"><?php echo $row2['description'];?></p>
 
 
                                 </div>

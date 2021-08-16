@@ -89,7 +89,6 @@ include('Vstyle.php');
                                 </div>
                             </div>
                         </div>
-
                     </div>
 
                     <?php include_once 'footer.php'; ?>
@@ -109,24 +108,6 @@ include('Vstyle.php');
 
 </html><!-- end document-->
 <?php include_once 'ModalRegister_Homeless.php'; ?>
-
-
-<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
-<script src="js/sweetalert.min.js"></script>
-<?php
-if (isset($_SESSION['status']) && $_SESSION['status'] != '') {
-?>
-    <script type='text/javascript'>
-        swal({
-            title: "<?php echo $_SESSION['status']; ?>",
-            icon: "<?php echo $_SESSION['status_code']; ?>",
-        });
-    </script>
-<?php
-    unset($_SESSION['status']);
-}
-?>
-
 
 <!-- Script for header table No sort-->
 <script type="text/javascript">
@@ -173,7 +154,7 @@ if (isset($_SESSION['status']) && $_SESSION['status'] != '') {
 <!-- javascript For update data through modal-->
 <?php include_once 'ModalDelete_Homeless.php'; ?>
 <!-- End javascript For update data through modal-->
-
+`
 <?php
 // sql to delete a record
 if (mysqli_query($connection, $sql)) {

@@ -35,7 +35,7 @@
     <section class="ftco-section-3">
         <div class="row justify-content-center mb-2 pb-3">
             <div class="col-md-7 text-center ftco-animate">
-                <h1 class="mb-1 pb-5">Admin | Offline Donation</h1>
+                <h1 class="mb-1 pb-5">Offline Donation</h1>
             </div>
             <!--Donate Offline-->
             <div class="container">

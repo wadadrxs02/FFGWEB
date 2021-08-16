@@ -60,14 +60,14 @@ include_once'Vtablehistory.php';
                                         <?php if($row['status'] =='Pending'){?>
                                         <td class="pending"><?php echo $row['status'];?></td>
                                         <?php   }    if($row['status'] =='Approved'){?>
-                                        <td class="process"><?php echo $row['status'];?></td>
+                                        <td class="approved"><?php echo $row['status'];?></td>
                                         <?php   }    if($row['status'] =='Recieved'){?>
-                                        <td class="process"><?php echo $row['status'];?></td>
+                                        <td class="recieved"><?php echo $row['status'];?></td>
                                         <?php  }   if($row['status'] =='Rejected'){?>
-                                        <td class="denied"><?php echo $row['status'];?></td>  
+                                        <td class="denied"><?php echo $row['status'];?></td>
                                         <?php } ?>
-                                       
-                                          
+
+
                                     </tr>
                                     <?php } ?>
                                 </tbody>

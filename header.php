@@ -132,9 +132,9 @@ if (isset($_SESSION['status1']) && $_SESSION['status1'] != '') {
 ?>
     <script type='text/javascript'>
         swal({
-            title: "<?php echo $_SESSION['status1']; ?>",
-            text: "<?php echo $_SESSION['status_text1']; ?>",
-            icon: "<?php echo $_SESSION['status_code1']; ?>",
+            title: "<?php echo $_SESSION['status']; ?>",
+            text: "<?php echo $_SESSION['status_text']; ?>",
+            icon: "<?php echo $_SESSION['status_code']; ?>",
         });
     </script>
 <?php

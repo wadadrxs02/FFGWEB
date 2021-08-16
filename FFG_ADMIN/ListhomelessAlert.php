@@ -2,43 +2,14 @@
 
   include('Xconnection.php');
   session_start();
+  include('Vstyle.php');
 ?>
 
 <!DOCTYPE html>
 <html lang="en">
 
-<style>
-.dataTables_wrapper .dataTables_paginate .paginate_button {
-    color: rgb(141, 54, 54) !important;
-    float: left;
-    padding: 10px !important;
-    position: relative;
-    right: 0;
-    min-width: 65px;
-    line-height: 10px !important;
-    border: 1px solid #e5e5e5;
-    -webkit-border-radius: 3px;
-    -moz-border-radius: 3px;
-    border-radius: 3px;
-    background: white !important;
-    margin-left: -3px;
-}
-
-.dataTables_wrapper .dataTables_paginate .paginate_button:hover {
-    background: #56c596!important;
-    color: black!important;
-    border-radius: 4px !important;
-    border: 1px solid #56c596!important;
-}
-
-.dataTables_wrapper .dataTables_paginate .paginate_button:active {
-    background: #56c596!important;
-    color: white!important;
-}
-</style>
-
 <!-- Title Page-->
-<title>Homeless Record</title>
+<title>Admin | Homeless Alert Record</title>
 
 <body>
     <div class="page-wrapper">
@@ -67,7 +38,7 @@
                             <div class="col-md-12">
                                 <div class="overview-wrap">
                                     <h2 class="title-1">Homeless Alert Information</h2>
-                                   
+
                                 </div>
                             </div>
                         </div>
@@ -80,43 +51,47 @@
                                         cellspacing="0">
                                         <thead>
                                             <tr>
-
-                                                <th width="25%">Name</th>
-                                                <th width="25%">Location</th>
-                                                <th width="20%">Health</th>
-                                                <th width="20%" class="no-sort">Picture</th>
-                                                <th width="10%" class="no-sort">Option</th>
+                                                <th width="5%">NO</th>
+                                                <th class="no-sort" width="10%">Gender</th>
+                                                <th class="no-sort" width="30%">Name </th>
+                                                <th width="15%">Date found</th>
+                                                <th class="no-sort" width="30%">founded by</th>
+                                                <th class="no-sort" width="5%">details</th>
                                             </tr>
                                         </thead>
                                         <tbody>
-                                            <?php $i=1;
-                                            $don = $connection->query("SELECT * FROM homelessalert ORDER BY id_alert DESC");
-                                            while($row = $don->fetch_array()){
-                                            ?>
+                                            <?php    $i=1;
+                                              $sql = $connection->query("SELECT donor.*,homelessalert.*
+                                              FROM homelessalert
+                                              INNER JOIN donor ON homelessalert.id_donor=donor.id_donor
+                                              ORDER BY id_alert DESC");     
+                                              while ($row = $sql->fetch_array()){
+                                             ?>
                                             <tr>
-                                                <td> <?php echo $row['name'];?></td>
-                                                <td> <?php echo $row['age'];?> </td>
-                                                <td> <?php echo $row['date_found'];?></td>
-                                                <td> <img src="ImgHomelessAlert/<?php echo $row['image'];?>"
-                                                        style="width:100px; height:100px"> </td>
+                                                <td></td>
+                                                <td><?php echo $row['gender'];?></td>
+                                                <td> <?php echo $row['hname'];?></td>
+                                                <td> <?php echo date('d/m/Y', strtotime($row['date_found'])); ?>
+                                                </td>
+                                                <td><?php echo $row['name'];?></td>
                                                 <td>
 
-                                                    <div class="table-data-feature" >
+                                                    <div class="table-data-feature">
                                                         <a href="#" data-toggle="modal"
-                                                            data-target="#ModalView_HomelessAlert<?php echo $row['id_alert'];?>">
+                                                            data-target="#ModalView_HomelessAlert<?php echo $row['id_alert']; ?>">
                                                             <button type='button' class='btn btn-success btn-sm'
-                                                                title="View" name="View" id="View" value="View"
+                                                                title="Edit" name="Edit" id="Edit" value="Edit"
                                                                 data-placement="top" data-toggle="tooltip"><span
-                                                                    class='far fa-eye'
+                                                                    class='far fa-edit'
                                                                     aria-hidden='true'></span></button>
                                                         </a>
                                                         &nbsp
                                                         <a href="#" data-toggle="modal"
-                                                            data-target="#ModalDelete_HomelessAlert<?php echo $row['id_alert'];?>">
+                                                            data-target="#DeleteModal<?php echo $row['id_alert']; ?>">
                                                             <button type='button' class='btn btn-danger btn-sm'
                                                                 title="Delete" name="Delete" id="Delete" value="Delete"
                                                                 data-placement="top" data-toggle="tooltip"><span
-                                                                    class='fas fa-trash-alt' 
+                                                                    class='fas fa-trash-alt'
                                                                     aria-hidden='true'></span></button>
                                                         </a>
                                                     </div>
@@ -129,12 +104,7 @@
                                 </div>
                             </div>
                         </div>
-
-                    </div>
-
-                    <?php include_once'footer.php';?>
-
-
+                    </div><?php include_once'footer.php';?>
                 </div> <!-- END SECTION CONTENT-->
             </div><!-- END MAIN CONTENT-->
         </div><!-- END PAGE CONTAINER-->
@@ -170,12 +140,10 @@ $('#DataTable').dataTable({
 
 
 <!-- javascript For update data through modal-->
-<?php include_once'ModalView_HomelessAlert.php';?>
+<?php include_once'ModalView_HomelessAlert.php';
+?>
 <!-- End javascript For update data through modal-->
 
-<!-- javascript For update data through modal-->
-<?php include_once'ModalDelete_HomelessAlert.php';?>
-<!-- End javascript For update data through modal-->
 
 <?php
 // sql to delete a record

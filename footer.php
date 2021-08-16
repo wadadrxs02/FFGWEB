@@ -48,7 +48,8 @@
                                     <a class="nav-link" href="index.php">Home <span class="sr-only">(current)</span></a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link" href="Homeless.php">Homeless</a>
+                                <a class="nav-link" href="#" data-toggle="modal" name="regcheck" id="regcheck"
+                                data-target="#HomelessCheck">Homeless</a>
                                 </li>
                                 <li class="nav-item">
                                 <a class="nav-link" href="#" data-toggle="modal" name="login" id="login"
@@ -77,5 +78,6 @@
 </footer>
 <?php
 include_once 'Modal-LoginA.php';
+include_once 'Modal-HomelessCheck.php';
 ?>
 <!-- ****** Footer Menu Area End ****** -->

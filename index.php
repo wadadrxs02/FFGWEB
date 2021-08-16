@@ -56,15 +56,15 @@ include_once 'Xconnection.php';
 
                         <div class="card-text">
                             <h3 class="count pt-3 pb-3">
-                                <?php $volunteer = $connection->query("SELECT COUNT(id_volunteer) AS totalvolunteer FROM Volunteer");
-                                while ($fetch = $volunteer->fetch_array()) { ?>
-                                    <?php echo $fetch['totalvolunteer']; ?>
+                                <?php $donor = $connection->query("SELECT COUNT(id_donor) AS totaldonor FROM donor");
+                                while ($fetch = $donor->fetch_array()) { ?>
+                                    <?php echo $fetch['totaldonor']; ?>
                                 <?php  } ?>
                                 </h5>
                                 <h4>
-                                    Registered Volunteer</h4>
+                                    Registered Member</h4>
                                 <p>
-                                    To this day, this registered volunteers shared their same passion to
+                                    To this day, this registered members shared their same passion to
                                     help the homeless in Malaysia</p>
                         </div>
                     </div>

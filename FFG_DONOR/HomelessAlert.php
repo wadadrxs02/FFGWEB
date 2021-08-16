@@ -12,7 +12,7 @@ include_once'../Xconnection.php';
 }
 
 .bg-primary {
-    background-color: #56c596!important;
+    background-color: #56c596 !important;
 }
 </style>
 <div id="colorlib-main">
@@ -33,14 +33,15 @@ include_once'../Xconnection.php';
                             <div data-form-alert="true">
                                 <div hidden="" data-form-alert-success="true">Thanks for your report! </div>
                             </div>
-                            <form action="Xalert.php" method="post" data-form-title="Members Information">
+                            <form action="Xalert.php" method="post" data-form-title="Members Information"  enctype="multipart/form-data"> 
                                 <input type="hidden"
                                     value="Gcs9DFMwXPrXu0WyZP/onyJHFMuegaFp194nEhGfDj434bF0FgCs6cmkIBD5iQ4c0yn1pQGi5P3LCl3DX7XGR4od69yzUDqvXGJip4cF5zoetnpVFZTNLxqKyoh1ivfU"
                                     data-form-email="true">
 
-                                <div class="row"><!--#00e677-->
+                                <div class="row">
+                                    <!--#00e677-->
                                     <div class="col-sm-12">
-                                        <div class="card text-white"  
+                                        <div class="card text-white"
                                             style="background-color: #1e2124; padding: 0.5rem;">
                                             <div class="card-body">
                                                 <label for="name-form1-h"
@@ -63,7 +64,7 @@ include_once'../Xconnection.php';
                                 </div>
 
                                 <div class="col-md-12 form-group">
-                                    <input type="text" class="form-control" name="phone"
+                                    <input type="text" class="form-control" name="location"
                                         placeholder="Location Details *">
                                 </div>
 
@@ -100,7 +101,7 @@ include_once'../Xconnection.php';
 
                                 <div class="col-md-6 form-group">
                                     <label for="form-input-ageRange">Age (Approximate)</label>
-                                    <select name="ageRange" id="form-input-ageRange" class="form-control">
+                                    <select name="age" id="form-input-ageRange" class="form-control">
                                         <option value="" selected></option>
                                         <option value="19-24">Less than 18</option>
                                         <option value="19-24">18-24</option>
@@ -113,15 +114,13 @@ include_once'../Xconnection.php';
                                 </div>
 
                                 <div class="col-md-6  form-group">
-                                    <label for="form-input-date">What date did you see this person?</label>
-                                    <input name="date" type="datetime" id="form-input-date"
-                                        class="form-control form-date-time-field form-datepicker"
-                                        data-datepicker-format="d/m/Y" data-datepicker-enableDate="1"
-                                        placeholder="DD/MM/YYYY" />
+                                    <label for="form-input-date">When did you see this person?</label>
+                                    <input name="date_found" type="date" id="form-input-date"
+                                        class="form-control form-date-time-field form-datepicker" />
                                 </div>
                                 <div class="col-md-6 form-group">
                                     <label for="form-input-time">What time did you see this person at?</label>
-                                    <input name="time" type="datetime" id="form-input-time"
+                                    <input name="time" type="time" id="form-input-time"
                                         class="form-control form-date-time-field form-datepicker"
                                         data-datepicker-format="h:i K" data-datepicker-enableTime="1"
                                         placeholder="e.g. 11:00 pm" />
@@ -130,7 +129,7 @@ include_once'../Xconnection.php';
 
                                 <div class="col-md-12 form-group">
                                     <label for="form-input-time">Description</label>
-                                    <textarea class="form-control" name="name" rows="4"
+                                    <textarea class="form-control" name="dsc" rows="4"
                                         placeholder="Please tell us any further information that will help us recognise the individual"></textarea>
                                 </div>
                                 <div class="col-md-12 form-group">
@@ -140,11 +139,11 @@ include_once'../Xconnection.php';
 
                                     <div class="options">
                                         <label class="checkbox-inline">
-                                            <input type="checkbox" name="beddedDown[]" value="Yes" />
+                                            <input type="checkbox" name="beddedDown" value="Yes" />
                                             Yes
                                         </label>
                                         <label class="checkbox-inline">
-                                            <input type="checkbox" name="beddedDown[]" value="No" />
+                                            <input type="checkbox" name="beddedDown" value="No" />
                                             No
                                         </label>
                                     </div>
@@ -152,11 +151,18 @@ include_once'../Xconnection.php';
                                         the streets, or in doorways, parks or bus shelters or buildings or other places
                                         not designed for habitation such as car parks, stations & etc.
                                     </div>
-                                    <div class="form-group">
-                                        <input type="submit" value="Submit" class="btn btn-primary py-3 px-5">
-                                    </div>
                                 </div>
 
+                                <div class="col-md-8 form-group">
+
+                                    <label for="image-form1-h" class="form-control-label mbr-fonts-style ">Upload
+                                        their picture if you had any :</label>
+                                    <input type="hidden" name="size" value="1000000">
+                                    <input type="file" name="image" id="image">
+                                </div>
+                                <div class="col-md-3 form-group">
+                                    <input type="submit" name="submit" value="Submit" class="btn btn-primary py-3 px-5">
+                                </div>
                             </form>
                         </div>
                     </div>
@@ -172,6 +178,7 @@ include_once'../Xconnection.php';
 </div><!-- END COLORLIB-MAIN -->
 </div><!-- END COLORLIB-PAGE -->
 
+<?php include_once'Ysweetalert.php'; ?>
 
 
 <?php include_once'footer.php'; ?>

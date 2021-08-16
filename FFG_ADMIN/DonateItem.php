@@ -157,7 +157,7 @@ $('#DataTable').dataTable({
 
 
 <!-- javascript For update data through modal-->
-<?php include_once'ModalView_Donor.php';
+<?php // include_once'ModalView_Donor.php';
 ?>
 <!-- End javascript For update data through modal-->
 

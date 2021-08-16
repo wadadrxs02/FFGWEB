@@ -10,7 +10,7 @@ include_once '../Xconnection.php';
     }
 </style>
 <div id="colorlib-main">
-    <div class="hero-wrap js-fullheight" style="background-image: url(images/v4.png);" data-stellar-background-ratio="0.5">
+    <div class="hero-wrap js-fullheight" style="background-image: url(images/v4.png);" data-stellar-background-ratio="0.5"> <br>
         <div class="overlay"></div>
         <div class="js-fullheight d-flex justify-content-center align-items-center">
             <div class="container">
@@ -113,6 +113,7 @@ if (isset($_SESSION['status']) && $_SESSION['status'] != '') {
     <script type='text/javascript'>
         swal({
             title: "<?php echo $_SESSION['status']; ?>",
+            text: "<?php echo $_SESSION['status_text']; ?>",
             icon: "<?php echo $_SESSION['status_code']; ?>",
         });
     </script>
